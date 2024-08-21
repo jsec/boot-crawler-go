@@ -7,12 +7,10 @@ import (
 
 func printReport(pages map[string]int, baseURL string) {
 	fmt.Println("=============================")
-	fmt.Println("REPORT for ", baseURL)
+	fmt.Println("REPORT for", baseURL)
 	fmt.Println("=============================")
 
 	sortedKeys := getSortedKeys(pages)
-
-	fmt.Println("sortedKeys:", sortedKeys)
 
 	for _, key := range sortedKeys {
 		fmt.Println("Found", pages[key], "internal links to", key)
